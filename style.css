@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Oswald:wght@200&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  width: 15em;
+  max-width: 100%;
+}
+
+/* === NAV === */
+
+.navbar {
+  display: block;
+
+  position: sticky;
+  top: 0;
+  flex-direction: column;
+  background-color: black;
+  overflow: hidden;
+}
+
+.logo {
+  font-family: "Bakbak One", sans-serif;
+  font-size: 3rem;
+  margin: 0.5rem 2rem;
+  margin-right: 0;
+  color: white;
+  display: inline-block;
+  user-select: none;
+}
+
+.toggle {
+  float: right;
+  width: 4rem;
+  margin: 0.5rem 1rem;
+  transition: 700ms;
+}
+
+.toggle[data-active="true"] {
+  transform: rotateX(180deg);
+}
+
+.simpleNav {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  max-height: 0rem;
+  opacity: 0;
+  transition: 700ms ease-in-out;
+}
+
+.simpleNav[data-active="true"] {
+  max-height: 15.2rem;
+  opacity: 1;
+}
+
+nav li {
+  padding: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 1.2em;
+  color: white;
+  padding: 1rem 4rem;
+  transition: 500ms ease;
+  box-sizing: content-box;
+}
+
+.simpleNav a:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (min-width: 65rem) {
+  .navbar {
+    position: initial;
+  }
+  nav img {
+    display: none;
+  }
+
+  .simpleNav {
+    opacity: 1;
+    display: inline-flex;
+    float: right;
+    margin: 0.85rem 2rem;
+  }
+}
+
+/* === HEADER === */
+
+header {
+  text-align: center;
+  color: white;
+  background-color: rgb(48, 48, 48);
+}
+
+header h1 {
+  margin: 0;
+  padding: 5rem 1rem;
+  padding-bottom: 1rem;
+  font-family: "BakBak One", serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+header p {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 5rem 1rem;
+  padding-top: 0;
+}
+
+@media (min-width: 65rem) {
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header p {
+    font-size: 1.5rem;
+  }
+}
+
+/* === INTRO === */
+
+.intro {
+  display: flex;
+
+  background-color: rgb(209, 209, 209);
+}
+
+.intro h2 {
+  font-family: "BakBak One", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+.intro p {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+.intro img {
+  padding: 1rem;
+}
+
+@media (min-width: 65rem) {
+  .intro > * {
+    padding: 10rem;
+    flex: 1;
+  }
+}
+/* === TRICKS === */
+
+.tricks {
+  display: flex;
+
+  background-color: rgb(173, 173, 173);
+  border-top: 1rem solid black;
+}
+
+.tricks h2 {
+  font-family: "BakBak One", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+.tricks p {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+.tricks ol {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 1rem 3rem;
+}
+
+.tricks img {
+  padding: 1rem;
+}
+
+@media (min-width: 65rem) {
+  .tricks > * {
+    flex: 1;
+    padding: 10rem;
+  }
+
+  .img {
+    flex: 0.5;
+    align-self: center;
+  }
+}
+
+/* === FOOTER === */
+
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+footer p {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 2rem 3rem;
+}
+
+footer ul {
+  display: inline-flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer a {
+  padding: 0;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
